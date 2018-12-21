@@ -43,16 +43,12 @@
         <h1 id="1">1 Instructie Lightspeed plug-in</h1>
         <h2 id="1_1">1.1 De configuratie</h2>
         <p>Het is belangrijk dat je de MyParcel module eerst configureert. Nadat je gekozen hebt voor <span class="nice">Installeer app</span> kom je op de volgende configuratiepagina:</p>
-        <img src="media/1.png" alt="De configuratie"><br>
-        <p>
-            <small>Note: in bovenstaande voorbeeld is de introductietekst anders. De app is hier al geïnstalleerd.</small>
-        </p>
+        <img src="media/1.jpg" alt="De configuratie"><br>
         <ol>
-            <li>Bij <span class="nice">MyParcel gebruikersnaam</span> vul je jouw gebruikersnaam van MyParcel in.</li>
-            <li>Bij <span class="nice">MyParcel API-key</span> kun je de API key invullen. Je kunt deze bij MyParcel aanvragen via <a href='mailto:info@myparcel.nl'> info@myparcel.nl</a> of onder <span class="nice">Instellingen → Algemeen</span> in MyParcel.</li>
+            <li>Bij <span class="nice">API-key</span> kun je de API key invullen. Je kunt deze vinden bij MyParcel backoffice onder <span class="nice">Instellingen → Algemeen</span> in MyParcel.</li>
             <li>
                 Vervolgens dien je aan te geven hoe je de koppeling wilt gebruiken
-                <img src="media/2.png" alt="Doorsturen naar MyParcel" style="max-width: 350px">
+                <img src="media/2.jpg" alt="Doorsturen naar MyParcel" >
                 <br><br>
                 Je kunt zelf bepalen wanneer je de orderdata naar MyParcel wilt versturen. Je hebt daarvoor een tweetal mogelijkheden:<br><br>
                 <ul>
@@ -72,7 +68,7 @@
             <li>
                 <p>Vervolgens kun je aangeven of je de zendingen in MyParcel direct wilt verwerken, of dat je dit handmatig in MyParcel doet.</p>
                 <p>
-                    <img src="media/4.png" alt="handmatig MyParcel" style="max-width: 250px;">
+                    <img src="media/4.jpg" alt="handmatig MyParcel">
                 </p>
                 <ul>
                     <li>
@@ -84,10 +80,26 @@
                         Het spreekt voor zich dat bij deze optie de zendingen in MyParcel niet direct worden verwerkt. Wanneer je voor deze optie kiest, heeft je meer flexibiliteit. JE kunt in dit geval later nog verzendopties toevoegen of wijzigen.
                     </li>
                 </ul>
+                <br>
+                <li>
+                    <p>Je kunt de zendingen standaard een verzendoptie meegeven.</p>
+                    <p>
+                        <img src="media/verzendopties.jpg" alt="Verzendopties">
+                    </p>
+                </li>
+                <li>
+                    <p>Hier kan je verschillende bezorgopties aanzetten en e.v.t. titel en totaalbedrag aanpassen.</p>
+                    <p>
+                        <img src="media/bezorgopties.jpg" alt="Bezorgopties">
+                    </p>
+                </li>
             </li>
         </ol>
 
-        <h2 id="1_2">1.2 Het wijzigen van de verzendmethode(n)</h2>
+        <h2 id="1_2">1.2 PostNL afhaallocaties activeren</h2>
+        <ol>
+        <li>
+            <b>Integratie inschakelen</b>
         <p>
             <img src="media/5.png" alt="" style="float: right">
             Ga in jouw Lightspeed backend naar <span class="nice">Algemeen → Instellingen → Verzendmethoden</span>. Hier kun je de PostNL verzendmethode configureren.
@@ -95,14 +107,44 @@
         </p>
 
         <p>
-            <b>Integratie inschakelen</b><br>
             Bij de <span class="nice">login information</span> kun je de verzendmethode inschakelen.
             Overige velden zoals klantnummer, klantcode, locatiecode, gebruikersnaam en wachtwoord kunt je leeg laten. Zet de Mode op <span class="nice">live</span>.
             <br>
             <img src="media/6.png" alt="">
         </p>
+    </li>
+        <li>
+                <b>Verzendmethoden instellen voor afhaallocaties</b><br>
+                <p>
+                Kies hier voor de optie <span class="nice">Ophalen op een postkantoor</span> als je jouw klanten de gelegenheid wil geven het pakket te laten bezorgen op een postkantoor of servicepunt.
+                <img src="media/verzendmethoden.png">
+            </p>
+        </li>
+        <li>
 
+                <b>Verzendmethoden in de checkout</b><br>
+                <p>
+                Nadat je de wijzigingen hebt doorgevoerd en opgeslagen zie je in het bestelproces van jouw webwinkel de volgende verzendmethoden:
+            </p>
+                <img src="media/checkout.png">
+
+
+
+
+            </li>
+        </ol>
         <h2 id="1_3">1.3 Het aanmaken van de labels</h2>
+        <ol>
+        <li>
+            <b>Verzendmethodes Lightspeed</b><br>
+            <p>
+            Om de zendingen op de juiste manier te kunnen exporteren naar MyParcel moet je in de titel van de verzendmethode de juiste benamingen gebruiken. Bijvoorbeeld <span class="nice">PostNL</span> moet voor alle pakketen en <span class="nice">Brievenbus</span> voor alle brievenbuspakjes:
+        </p>
+        <img src="media/VerzendmethodenLightspeed.jpg">
+            </li>
+            <li>
+                <b>Labels versturen naar de backoffice van MyParcel</b>
+            </li>
         <p>
             Nadat de verzendmethoden de juiste titels hebben en de MyParcel module naar wens is geconfigureerd, kun je orders gaan verwerken. Je gaat hiervoor in de back-office naar <br><span class="nice">Orders</span>.
         </p>
@@ -121,6 +163,7 @@
         <p>
             <span class="nice">Let op.</span> Omdat wij niet teveel requests mogen doen bij Lightspeed, worden de aangemaakte verzendingen periodiek bij Lightspeed opgevraagd en in MyParcel geïmporteerd. Het kan dus even duren voordat jouw verzendingen in MyParcel zichtbaar zijn. Nadat je de verzendingen hebt verwerkt in MyParcel wordt na maximaal 2 uur ook de 3S code aan de order toegevoegd. Je hoeft dit dus niet meer handmatig te doen.
         </p>
+    </ol>
         <h2 id="1_4">1.4 Track & Trace mail</h2>
         <p>
             Indien je er voor kiest om de Track & Trace mail vanuit Lightspeed te versturen, kun je deze functie in MyParcel onder <span class="nice">Instellingen → Track & Trace</span> uitzetten. Indien je er voor kiest om de Track & Trace mail vanuit MyParcel te versturen, kun je de email ‘Order track&trace code’ deactiveren. Dit doet je door de titel en de inhoud leeg te maken.
@@ -130,62 +173,7 @@
             Indien je meerdere webwinkels hebt onder één Ligthspeed account, dan moet je deze elk apart configureren. Selecteer de juiste store en herhaal de stappen om de app te configureren zoals eerder uitgelegd onder <span class="nice">App store → koop app → installeer app</span>. Herhaal deze stappen voor iedere store afzonderlijk
         </p>
 
-        <h1 id="2">2 Installatiehandleiding PostNL Checkout in MyParcel.</h1>
-        <p>
-            Het is ook mogelijk om de Checkout pagina van PostNL te installeren, zodat jouw klant gebruik kan maken van verschillende bezorgopties. Ga in jouw Lightspeed backend naar <span class="nice">Algemeen → Instellingen → Verzendmethoden</span>. Volg hier onderstaande instructie:
-        </p>
-        <ol>
-            <li>
-                <b>Login information</b><br>
-                Schakel deze integratie in door de checkbox aan te vinken en zet de <span class="nice">mode</span> op <span class="nice">live</span>.
-            </li>
-            <li>
-                <b>Verzendmethoden</b><br>
-                Kies hier voor de optie <span class="nice">Ophalen op een postkantoor</span> als je jouw klanten de gelegenheid wil geven het pakket te laten bezorgen op een postkantoor of servicepunt. Voor zendingen naar het buitenland, kun je hier kiezen voor de optie Europe delivery (EU-pack).
-                <img src="media/verzendmethoden.png">
-            </li>
-            <li>
-                <b>Extra shipping options</b><br>
-                Geef hier aan wat je voorkeursinstellingen zijn voor het versturen via MyParcel. Dit kun je later per zending altijd wijzigen.
-            </li>
-            <li>
-                <b>Instellingen</b><br>
-                Je kunt er hier voor kiezen jouw klanten de mogelijkheid te geven hun leveringsdatum te kiezen. <span class="nice">Let op.</span> Dit maakt het verwerken van de verzendingen voor je als webwinkelier een stuk ingewikkelder. Je moet namelijk per order opletten wanneer deze bij PostNL moet worden aangeleverd, PostNL houdt de pakketten niet voor je achter.<br>
-                Voorbeeld: Een klant doet op maandag een bestelling en wil het graag vrijdag geleverd hebben. Je dient er dan rekening mee te houden dat je dit pakket pas donderdag bij PostNL aanlevert zodat het vrijdag wordt bezorgd. Dit is met één afwijkende order nog te doen, maar vereist bij meerdere pakketten met verschillende leverdata een hele goede organisatie. Als je dit toch wenst te doen, kies dan bij <span class="nice">Extra Verzendmogelijkheden</span> voor <span class="nice">Sta toe dat consumenten hun leveringsdatum kunnen kiezen</span>.
-                <img src="media/9.png" alt="">
-            </li>
-            <li>
-                <b>Afzenderadres</b><br>
-                Je dient hier jouw afzenderadres op te geven.
-            </li>
-            <li>
-                <b>Prijzen</b><br>
-                Klik op <span class="nice">Voeg prijzen</span> en configureer prijzen per methode, land en gewicht. Je kunt beginnen met het instellen van de <span class="nice">standaard aflevering</span> (default delivery).
-                <ol>
-                    <li>Schakel de <span class="nice">Enable this pricing</span> in door het vinkje aan te zetten aan de rechterkant.</li>
-                    <li>Je kunt er hier voor kiezen jouw klanten geen verzendkosten te berekenen boven een bepaald bedrag. Dit kun je instellen onder het kopje <span class="nice">configuratie</span>.</li>
-                    <li>Door de producten met gewichten in te stellen kun je op basis van gewichten verschillende verzendkosten aan jouw klanten doorberekenen. Voeg de gewichten met de daarbij behorende prijzen toe bij <span class="nice">Voeg gewicht toe</span>. Kies vervolgend het juiste land en klik vervolgens op <span class="nice">opslaan</span>.</li>
-                </ol>
-                <small>Voorbeeld:</small><br>
-                <img src="media/10.png" alt=""><br>
-                <small>Herhaal deze stappen om voor meerdere verzendmethoden de prijzen in te stellen.</small>
-            </li>
-            <li>
-                <b>Sla vervolgens de wijzigingen op</b>
-            </li>
-            <li>
-                <b>Verzendmethoden in de checkout</b><br>
-
-                Nadat je de wijzigingen hebt doorgevoerd en opgeslagen zie je in het bestelproces van jouw webwinkel de volgende verzendmethoden:
-                <img src="media/checkout.png">
-
-
-
-
-            </li>
-        </ol>
-
-        <h1 id="3">3 Indien je gebruik maakt van gratis verzending boven een bepaald bedrag</h1>
+        <h1 id="2">2 Indien je gebruik maakt van gratis verzending boven een bepaald bedrag</h1>
         <p>
             Om gebruik te maken van deze mogelijkheid, moet de PostNL module geactiveerd zijn.
 
@@ -201,7 +189,7 @@
             <li>Kies voor <span class="nice">Opslaan</span>.</li>
         </ol>
 
-        <h1 id="4">4 Hulp nodig?</h1>
+        <h1 id="3">3 Hulp nodig?</h1>
         <p>
             Indien je vragen hebt over de installatie of het gebruik van de plug-in, helpen wij je graag. Ook tips & suggesties voor verbetering van de (werking) van de plug-in, horen wij graag. Mail support@myparcel.nl of bel: 023 30 30 315.
         </p>
