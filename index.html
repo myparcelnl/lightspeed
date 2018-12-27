@@ -15,7 +15,6 @@
 </head>
 <body>
 <section class="page-header">
-    <p>
         <img alt="" src="media/logo_myparcel.png"/>
         <img src="media/logo.png" style="margin-bottom: 20px;height: 150px;"/></p>
     <h1 class="project-name">
@@ -27,174 +26,124 @@
     <!--<a target="_blank" class="btn" href="https://github.com/myparcelnl/Magento1">View on GitHub</a>-->
 </section>
 <section class="main-content">
-    <h1>Instructie Lightspeed plug-in</h1>
-    <p>
-        In deze handleiding wordt uitgelegd hoe je de Lightspeed koppeling met MyParcel kunt installeren en hoe deze koppeling werkt.
-    </p>
-    <p>
-        In de <span class="nice">App Store</span> van Lightspeed kun je de MyParcel app vinden. Je kunt hier kiezen voor <span class="nice">installeer app</span>. De app wordt aangeboden door MyParcel, deze is kosteloos. Om gebruik te kunnen maken van de app dien je klant te zijn bij MyParcel. Wanneer je nog geen klant bent, kun je vrijblijvend registreren via de volgende link:
-        <a href="http://www.myparcel.nl/registreren" target="_blank">www.myparcel.nl/registreren</a>.
-    </p>
-
-    <h1>Inhoud</h1>
+    <h1>Inleiding</h1>
+    In deze handleiding laten wij zien hoe de MyParcel app geinstalleerd en ingesteld kan worden in jouw Lightspeed omgeving. De plugin wordt kosteloos aangeboden door MyParcel. Wij helpen jou graag met eventuele vragen over de werking van de app.
+    <br><br>
+    Alle functies van de app zijn getest in een standaard Lightspeed omgeving.
+    <br><br>
+    De in de vensters getoonde prijzen zijn slechts als voorbeeld ingesteld en wijken mogelijk af van werkelijke tarieven. Voor de juiste prijzen kun jij de tarieven in <a href="https://backoffice.myparcel.nl/tarieven" target="_blank">jouw account</a> raadplegen.
+        <h1>Inhoud</h1>
     <div class="menu"></div>
     <div>
+      <h1 id="1">1 Installatie</h1>
+      <h2 id="1_1">1.1 Via de App Store van Ligthspeed</h2>
+      In deze handleiding wordt uitgelegd hoe je de Lightspeed koppeling met MyParcel kunt installeren en hoe deze koppeling werkt.
 
-        <h1 id="1">1 Instructie Lightspeed plug-in</h1>
-        <h2 id="1_1">1.1 De configuratie</h2>
-        <p>Het is belangrijk dat je de MyParcel module eerst configureert. Nadat je gekozen hebt voor <span class="nice">Installeer app</span> kom je op de volgende configuratiepagina:</p>
-        <img src="media/1.jpg" alt="De configuratie"><br>
+      In de <span class="nice">App Store</span> van Lightspeed kun je de <b>MyParcel</b> app vinden. Er zijn twee apps aanwezig (MyParcel & MyParcel BE), maar voor MyParcel NL dient de <b>MyParcel</b> gebruikt te worden. <br>
+      <br>
+      Je kunt hier kiezen voor <span class="nice">Installeer app</span>. De app wordt kosteloos door MyParcel aangeboden. Om gebruik te kunnen maken van de app dien je klant te zijn bij MyParcel. Ben je nog geen klant? Regstreer vrijblijvend een account op <a href="https://backoffice.myparcel.nl/registration" target="_blank">deze pagina</a>.
+
+      <h2 id="1_2">1.2 Configuratie MyParcel app</h2>
+      Na een succesvolle installatie volgt de configuratiepagina:
+      <br><br>
+      <img src="media/1.jpg" alt="De configuratie"><br>
         <ol>
-            <li>Bij <span class="nice">API-key</span> kun je de API key invullen. Je kunt deze vinden bij MyParcel backoffice onder <span class="nice">Instellingen → Algemeen</span> in MyParcel.</li>
-            <li>
-                Vervolgens dien je aan te geven hoe je de koppeling wilt gebruiken
+            <li>Bij <span class="nice">API Key</span> dient de API key te worden ingevuld. Deze is te vinden op <a href="https://backoffice.myparcel.nl/settings" target="_blank">deze pagina</a> in de backoffice van MyParcel.</li>
+            <li>Vervolgens dien je aan te geven wanneer een nieuwe order naar MyParcel wordt gestuurd.
                 <img src="media/2.jpg" alt="Doorsturen naar MyParcel" >
                 <br><br>
-                Je kunt zelf bepalen wanneer je de orderdata naar MyParcel wilt versturen. Je hebt daarvoor een tweetal mogelijkheden:<br><br>
-                <ul>
-                    <li>
-                        <b>Orders met status <span class="nice">Niet verzonden</span> (aanbevolen)</b><br>
-                        Wanneer je kiest voor doorsturen van <span class="nice">Orders met status ‘Niet verzonden’ (aanbevolen)</span>, worden alle orders met status Niet verzonden direct naar MyParcel gestuurd. Omdat alle nieuwe orders binnen Lightspeed automatisch de status Niet verzonden hebben, worden al jouw orders in Myparcel gezet. <span class="nice">Let op.</span> Dit kan soms tot 15 minuten duren. Je hoeft dus niets te doen om jouw orders in MyParcel te importeren.
-                    </li>
-                    <li>
-                        <b>Orders met status <span class="nice">Verzonden</span></b><br>
-                            Wanneer je kiest voor doorsturen van <span class="nice">Orders met status ‘Verzonden’</span>, worden alle orders in MyParcel gezet zodra je de order in jouw Lightspeed backend handmatig op <span class="nice">verzonden</span> zet. Je kunt dit doen door de orders aan te vinken en rechtsboven voor <span class="nice">Markeer als verzonden</span> te kiezen.
-                        <img src="media/3.png" alt="Order met status verzonden">
-                        Nadat je dit hebt gedaan, zullen de orders binnen 15 minuten in MyParcel zichtbaar zijn. Het kan zijn dat orders dubbel in MyParcel komen te staan indien je orders, nadat ze de status <span class="nice">Verzonden</span> hebben, een andere status geeft en vervolgens opnieuw op <span class="nice">Verzonden</span> zet.
-                    </li>
-                </ul>
-                <br>
-            </li>
+                <b>Orders met status <span class="nice">Niet verzonden</span> (aanbevolen)</b><br>
+                        Bij deze keuze worden alle orders met status <span class="nice">Niet verzonden</span> direct naar MyParcel gestuurd. Omdat alle nieuwe orders binnen Lightspeed automatisch de status <span class="nice">Niet verzonden</span> hebben, worden al jouw orders vrijwel direct in Myparcel gezet.
+                <br><br>
+                <b>Orders met status <span class="nice">Verzonden</span></b><br>
+                Bij deze keuze worden alle orders in MyParcel gezet zodra de order in Lightspeed handmatig op <span class="nice">Verzonden</span> wordt zet. Dit doe je door de order aan te vinken en rechtsboven voor <span class="nice">Markeer als verzonden</span> te kiezen.
+                <img src="media/3.png" alt="Order met status verzonden">
+                Na deze actie komen de aangevinkte orders vrijwel direct in jouw MyParcel omgeving. Het kan zijn dat orders dubbel in MyParcel komen te staan indien je orders, nadat ze de status <span class="nice">Verzonden</span> hebben, een andere status geeft en vervolgens opnieuw op <span class="nice">Verzonden</span> zet.
+                <br><br>
             <li>
-                <p>Vervolgens kun je aangeven of je de zendingen in MyParcel direct wilt verwerken, of dat je dit handmatig in MyParcel doet.</p>
-                <p>
-                    <img src="media/4.jpg" alt="handmatig MyParcel">
-                </p>
-                <ul>
-                    <li>
-                        <b>Direct verwerken</b><br>
-                        Deze optie zorgt ervoor dat de, in MyParcel geïmporteerde, order ook direct wordt verwerkt. De zending wordt verwerkt met de gekozen standaard verzendwijze. Lastige van deze optie is, dat je naderhand geen aanvullende verzendopties meer kunt kiezen.
-                    </li>
-                    <li>
-                        <b>Niet direct verwerken (aanbevolen)</b><br>
-                        Het spreekt voor zich dat bij deze optie de zendingen in MyParcel niet direct worden verwerkt. Wanneer je voor deze optie kiest, heeft je meer flexibiliteit. JE kunt in dit geval later nog verzendopties toevoegen of wijzigen.
+                Vervolgens kan er aangeven worden of de geïmporteerde orders direct verwerken worden, of dat dit handmatig moet gebeuren.
+                                    <img src="media/4.jpg" alt="handmatig MyParcel">
+                <b>Direct verwerken</b><br>
+                Deze optie zorgt ervoor dat de geïmporteerde orders ook direct worden verwerkt. De zending wordt voorgemeld en voorzien van een barcode. <b>Let op:</b> Nadat de order is geimporteerd is er geen mogelijkheid om aanvullende verzendopties te kiezen of pakkettypen te wijzigen.
+                <br><br>
+                <b>Niet direct verwerken (aanbevolen)</b><br>
+                Het spreekt voor zich dat bij deze optie de geïmporteerde orders in MyParcel niet direct worden verwerkt. Deze optie geeft jou meer flexibiliteit. Mochten er wijzigingen zijn qua verzendopties, bezorgopties of pakkettypen? Deze zijn later altijd nog toe te voegen of te wijzigen.
                     </li>
                 </ul>
                 <br>
                 <li>
-                    <p>Je kunt de zendingen standaard een verzendoptie meegeven.</p>
-                    <p>
-                        <img src="media/verzendopties.jpg" alt="Verzendopties">
-                    </p>
+                Wil je een bepaalde verzendoptie meegeven aan de order, dan is dat hier op te geven.
                 </li>
+                <img src="media/verzendopties.jpg" alt="Verzendopties">
+
                 <li>
-                    <p>Hier kan je verschillende bezorgopties aanzetten en e.v.t. titel en totaalbedrag aanpassen.</p>
-                    <p>
-                        <img src="media/bezorgopties.jpg" alt="Bezorgopties">
-                    </p>
+                In het laatste onderdeel kunnen verschillende <a href="https://blog.myparcel.nl/bezorgopties/" target="_blank">bezorgopties</a> worden ingesteld die vervolgens worden getoond in de checkout van jouw webshop. MyParcel houdt rekening met jouw laatste bestelmoment en op welke dagen jij de pakketten inlevert bij PostNL. Bied je graag een avondlevering, ochtendlevering, maandaglevering of één van de andere opties? Vink jouw gewenste optie aan, geef jouw eigen titel mee en bepaal een totaalbedrag voor de verzendkosten.
+                <br><br>
+                Ben je klaar met het instellen van alle opties? Klik onderaan op <span class="nice">Voltooien</span> om de configuratie op te slaan en af te sluiten.
+                <img src="media/Bezorgopties instellingen Lightspeed.png" alt="Bezorgopties">
+                <br>
+                Wanneer we bovenstaande afbeelding als voorbeeld nemen dan komt dit in de checkout als volgt uit te zien.
+                <img src="media/Bezorgopties checkout Lightspeed.png" alt="Bezorgopties checkout">
+                <br>
+                De bovenste twee verzendmethoden (Bezorgd thuis of op het werk & Ophalen bij PostNL locatie) komen niet vanuit deze configuratie, maar worden seperaat ingesteld in Lightspeed bij de PostNL module. Zie in <a href="https://myparcelnl.github.io/lightspeed/#1_3">paragraaf 1.3</a> welke stappen er doorlopen moeten worden om ook dit in te stellen.
                 </li>
             </li>
         </ol>
 
-        <h2 id="1_2">1.2 PostNL afhaallocaties activeren</h2>
+        <h2 id="1_3">1.3 Configuratie Ophalen bij een PostNL locatie</h2>
+        Naast bovenstaande configuratie is het ook mogelijk om jouw klanten de mogelijkheid te geven om te kiezen voor een PostNL ophaallocatie. Oorspronkelijk hoort deze functionaliteit bij de PostNL integratie, maar de koppeling van MyParcel heeft ervoor gezorgd dat deze functionaliteit word ondersteund!
+        <br><br>
         <ol>
         <li>
-            <b>Integratie inschakelen</b>
-        <p>
-            <img src="media/5.png" alt="" style="float: right">
-            Ga in jouw Lightspeed backend naar <span class="nice">Algemeen → Instellingen → Verzendmethoden</span>. Hier kun je de PostNL verzendmethode configureren.
+            <b>PostNL integratie inschakelen</b>
 
-        </p>
-
-        <p>
-            Bij de <span class="nice">login information</span> kun je de verzendmethode inschakelen.
-            Overige velden zoals klantnummer, klantcode, locatiecode, gebruikersnaam en wachtwoord kunt je leeg laten. Zet de Mode op <span class="nice">live</span>.
+            <img src="media/5.png" alt="" style="float: right"><br>
+            Ga in Lightspeed naar <span class="nice">Algemeen → Instellingen → Verzendmethoden</span>. Hier kun je de PostNL verzendmethode configureren.
+            <br>
+            Bij de <span class="nice">Login Information</span> is de integratie in te schakelen. Overige velden zoals klantnummer, klantcode, locatiecode, gebruikersnaam en wachtwoord dienen <b>niet ingevuld</b> te worden. Zet vervolgens de Mode op <span class="nice">Live</span>.
             <br>
             <img src="media/6.png" alt="">
-        </p>
-    </li>
-        <li>
-                <b>Verzendmethoden instellen voor afhaallocaties</b><br>
-                <p>
-                Kies hier voor de optie <span class="nice">Ophalen op een postkantoor</span> als je jouw klanten de gelegenheid wil geven het pakket te laten bezorgen op een postkantoor of servicepunt.
-                <img src="media/verzendmethoden.png">
-            </p>
-        </li>
-        <li>
-
-                <b>Verzendmethoden in de checkout</b><br>
-                <p>
-                Nadat je de wijzigingen hebt doorgevoerd en opgeslagen zie je in het bestelproces van jouw webwinkel de volgende verzendmethoden:
-            </p>
-                <img src="media/checkout.png">
-
-
-
-
-            </li>
-        </ol>
-        <h2 id="1_3">1.3 Het aanmaken van de labels</h2>
-        <ol>
-        <li>
-            <b>Verzendmethodes Lightspeed</b><br>
-            <p>
-            Om de zendingen op de juiste manier te kunnen exporteren naar MyParcel moet je in de titel van de verzendmethode de juiste benamingen gebruiken. Bijvoorbeeld <span class="nice">PostNL</span> moet voor alle pakketen en <span class="nice">Brievenbus</span> voor alle brievenbuspakjes:
-        </p>
-        <img src="media/VerzendmethodenLightspeed.jpg">
             </li>
             <li>
-                <b>Labels versturen naar de backoffice van MyParcel</b>
+            <b>Verzendmethoden instellen</b><br>
+            Kies hier voor de optie <span class="nice">Ophalen bij een PostNL locatie</span> als je jouw klanten de gelegenheid wil geven het pakket te laten bezorgen op een postkantoor of servicepunt.
+            <img src="media/Ophalen PostNL Lightspeed.png">
             </li>
-        <p>
-            Nadat de verzendmethoden de juiste titels hebben en de MyParcel module naar wens is geconfigureerd, kun je orders gaan verwerken. Je gaat hiervoor in de back-office naar <br><span class="nice">Orders</span>.
-        </p>
-        <p>
-            Indien je hebt gekozen voor doorsturen van <span class="nice">Orders met status Niet verzonden</span>, hoef je in Lightspeed niets te doen. Wanneer je een nieuwe order binnen krijgt, wordt deze binnen 15 minuten automatisch in MyParcel gezet. Je kunt deze zendingen in MyParcel aanvinken en verwerken en/of printen.
-        </p>
-        <p>
-            Indien je hebt gekozen voor het doorsturen van <span class="nice">Orders met status Verzonden</span>, dan kun je in jouw Ligthspeed backend de orders aanvinken die je wilt gaan versturen via MyParcel.
-        </p>
-        <p>
-            <img src="media/7.png" alt="">
-        </p>
-        <p>
-            Na het aanpassen van de status wordt de order binnen 15 minuten in MyParcel gezet. Je kunt deze zending(en) in MyParcel aanvinken en verwerken en/of printen.
-        </p>
-        <p>
-            <span class="nice">Let op.</span> Omdat wij niet teveel requests mogen doen bij Lightspeed, worden de aangemaakte verzendingen periodiek bij Lightspeed opgevraagd en in MyParcel geïmporteerd. Het kan dus even duren voordat jouw verzendingen in MyParcel zichtbaar zijn. Nadat je de verzendingen hebt verwerkt in MyParcel wordt na maximaal 2 uur ook de 3S code aan de order toegevoegd. Je hoeft dit dus niet meer handmatig te doen.
-        </p>
-    </ol>
-        <h2 id="1_4">1.4 Track & Trace mail</h2>
-        <p>
-            Indien je er voor kiest om de Track & Trace mail vanuit Lightspeed te versturen, kun je deze functie in MyParcel onder <span class="nice">Instellingen → Track & Trace</span> uitzetten. Indien je er voor kiest om de Track & Trace mail vanuit MyParcel te versturen, kun je de email ‘Order track&trace code’ deactiveren. Dit doet je door de titel en de inhoud leeg te maken.
-        </p>
-        <h2 id="1_5">1.5 Multishop</h2>
-        <p>
-            Indien je meerdere webwinkels hebt onder één Ligthspeed account, dan moet je deze elk apart configureren. Selecteer de juiste store en herhaal de stappen om de app te configureren zoals eerder uitgelegd onder <span class="nice">App store → koop app → installeer app</span>. Herhaal deze stappen voor iedere store afzonderlijk
-        </p>
-
-        <h1 id="2">2 Indien je gebruik maakt van gratis verzending boven een bepaald bedrag</h1>
-        <p>
-            Om gebruik te maken van deze mogelijkheid, moet de PostNL module geactiveerd zijn.
-
-            Vervolgens dien je deze module als volgt in te stellen:
-        </p>
-        <ol>
-            <li>Ga naar <span class="nice">Instellingen → Verzendmethoden → PostNL → Prijzen</span></li>
-            <li>Kies bij <span class="nice">Prijzen</span> de juiste verzendmethode PostNL Standaard Verzending.</li>
-            <li>Activeer <span class="nice">Enable this pricing</span>.</li>
-            <li>Voer de orderwaarde in waarbij je gratis verzending aanbiedt.</li>
-            <li>Zet de belasting op 21%.</li>
-            <li>Controleer de prijzen nogmaals.</li>
-            <li>Kies voor <span class="nice">Opslaan</span>.</li>
+            <li>
+            <b>Prijzen instellen</b><br>
+            Als laatste is het noodzakelijk om de prijzen in te stellen voor deze optie. Klik onderaan de pagina op <span class="nice">Voeg prijzen toe</span> en kies de optie PostNL - PakjeGemak.<br>
+            Hier dient de verzendmethode middels het vinkje te worden toegestaan, kan er eventueel aangegeven worden wanneer deze optie gratis is, dienen er verzendkosten te worden opgegeven en moet Nederland aangevinkt worden als land.
+            <img src="media/Ophalen op een Postkantoor verzendmethode.png">
+            </li>
         </ol>
 
-        <h1 id="3">3 Hulp nodig?</h1>
-        <p>
-            Indien je vragen hebt over de installatie of het gebruik van de plug-in, helpen wij je graag. Ook tips & suggesties voor verbetering van de (werking) van de plug-in, horen wij graag. Mail support@myparcel.nl of bel: 023 30 30 315.
+        <h1 id="2">2 Ondersteunende verzendmethoden</h2>
+        In de loop der jaren ondersteund de app van MyParcel ook andere verzendmethoden die zijn ingesteld bij Lightspeed. Werk jij bijvoorbeeld ook met koppelingen tussen Exact - Lightspeed of Bol.com - Lightspeed?
+        <br><br>
+        Dan is onderstaand mogelijk interessant voor jou, omdat dit de verzendmethoden zijn die wij ondersteunen en hoe deze worden geimporteerd naar MyParcel.
+        <ul>
+        <li>PostNL - Pakketvoorkeur: Pakket</li>
+        <li>Bol.com - Pakketvoorkeur: Pakket</li>
+        <li>Exact - Pakketvoorkeur: Pakket</li>
+        <li>Brievenbus - Pakketvoorkeur: Brievenbuspakje</li>
+        <li>Mailbox - Pakketvoorkeur: Brievenbuspakje</li>
+        <li>Ongefrankeerd - Pakketvoorkeur: Ongefrankeerd</li>
+        <li>Frankering - Pakketvoorkeur: Ongefrankeerd</li>
+        <li>Postage - Pakketvoorkeur: Ongefrankeerd</li>
+      </ul>
+
+        <h1 id="3">3 Importeren van Lightspeed orders</h2>
+        Nu alle instellingen zijn voltooid is het tijd om de orders te verwerken. Afhankelijk van de keuze die is gemaakt <a href="https://myparcelnl.github.io/lightspeed/#1_2">wanneer een nieuwe order naar MyParcel wordt gestuurd</a> ga je naar de order om deze handmatig op verzonden te zetten of wordt de order direct geimporteerd naar MyParcel.
+
+        <h1 id="4">4 Track & Trace mail</h2>
+        Indien je ervoor kiest om Track & Trace e-mails vanuit Lightspeed te versturen, dan is het verstandig om deze functie in MyParcel <a href="https://backoffice.myparcel.nl/ttsettingstable">op deze pagina</a> uit te schakelen.<br>
+        Wil je graag de e-mail vanuit MyParcel versturen? Ga in Lightspeed naar <span class="nice">Instellingen → E-mailnotificaties → Order track & trace code</span> en laat de titel en de inhoud van dit template leeg.
         </p>
+        <h1 id="5">5 Multishop</h2>
+        Heb je meer shops onder één Ligthspeed account? Dan dien je de MyParcel app voor elke shop apart te installeren en te configureren. Herhaal simpelweg de stappen voor elke aparte store om deze volledig in te richten naar eigen wens.
 
-
+        <h1 id="6">6 Hulp nodig?</h1>
+        Indien je vragen hebt over de installatie of het gebruik van de app, helpen wij je graag. Ook tips & suggesties voor verbetering van de (werking) van de app horen wij graag. Mail <A HREF="mailto:support@myparcel.nl">support@myparcel.nl</A> of bel: 023 30 30 315.
     </div>
 
     <footer class="site-footer">
