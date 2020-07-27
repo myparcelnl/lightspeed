@@ -69,6 +69,14 @@
                 <h1 id="2">2. Configuratie</h1>
                 <h2 id="2_A">2.1 Standaard exportinstellingen, verzend- en bezorgopties</h2>
                 <p>
+                    Om de MyParcel-app te configureren, klik je vanuit het 'Home'-scherm in de backoffice van je Lightspeed-webshop op <span class="nice">Apps</span>. Klik aan de linkerkant op <span class="nice">App Store</span>
+                    en zoek in de zoekbalk rechtsboven naar 'myparcel'. Klik op de MyParcel-app om de informatiepagina van de app te openen en klik daarna op <span class="nice">Ga naar App</span>.
+                    De configuratiepagina wordt geopend op een nieuw tabblad. <br><br>
+                    
+                    <img alt="" src="media/Lightspeed_App_Openen4.gif" />
+                    
+                </p>
+                <p>
                     <b> API-key </b><br />
                     Om zendingen naar jouw MyParcel-account te kunnen exporteren, is een API-key noodzakelijk. Deze kan je in jouw MyParcel-backoffice vinden door 
                     rechts bovenin op het <img height="25" alt="" src="media/myparcel_account_icoon.png">-teken te klikken en vervolgens naar <span class="nice">Instellingen > Webshops > Algemeen</span> te gaan.
@@ -92,15 +100,21 @@
                 <p>
                     <b> Verzendopties </b><br />
                     Als je alle Nederlandse pakketzendingen standaard van een verzendoptie wilt voorzien <i>(bijvoorbeeld: verzerkerd verzenden, handtekening voor ontvangst, etc.)</i>, kan je deze hier selecteren. Let op dat er aan sommige verzendopties extra kosten zijn verbonden. Je kunt deze tarieven in de MyParcel-backoffice
-                    bovenaan de pagina bij <span class="nice">Financieel</span> > <span class="nice">Tarieven</span> berekenen.
+                    bovenaan de pagina bij <span class="nice">Financieel</span> > <span class="nice">Tarieven</span> berekenen.<br><br>
+                    
+                    Je kunt er ook voor kiezen om bij aflevering te laten controleren of de ontvanger 18+ is door <u>Leeftijdscontrole</u> aan te zetten. 
+                
                 </p>
                 <p>
                     <b> Bezorgopties </b><br />
-                    Het is ook mogelijk om je klanten te laten kiezen voor extra bezorgopties. Uit welke bezorgopties je klanten kunnen kiezen, stel je hier in. <b>Let op:</b> omdat de bezorgopties op zichzelf staande verzendmethoden zijn, vul je hier het <u>totaalbedrag van de verzendkosten</u> in.
+                    Het is ook mogelijk om je klanten te laten kiezen voor extra bezorgopties.
+                    Uit welke bezorgopties je klanten kunnen kiezen, stel je hier in. <b>Let op:</b> omdat de bezorgopties op zichzelf staande verzendmethoden zijn, vul je hier het <u>totaalbedrag van de verzendkosten</u> in.<br><br>
+                    
+                    Wanneer je liever geen datum toont bij de bezorgopties Ochtend- en avondlevering, vink dan de optie <u>Geen afleverdatum tonen in checkout</u> aan.
                 </p>
                 <img alt="" src="media/Lightspeed_Bezorgopties.png"> 
                 <p>
-                    Hier geef je ook aan op welke dagen jij zendingen aflevert bij PostNL en vanaf welk bedrag jij je zending gratis verstuurt.
+                    Hier geef je ook aan op welke dagen jij zendingen aflevert bij PostNL en vanaf welk bedrag jij je de zending met de bezorgoptie gratis verstuurt.
                 </p>
                 <p>
                 <h2 id="2_B">2.2 Pakketvoorkeuren</h2>
@@ -131,7 +145,7 @@
                 <p>
                     Om <b>Ophalen bij een PostNL-locatie</b> te tonen in je checkout, is de standaard plugin van PostNL benodigd.
                     Allereerst klik je aan de linkerkant in het menu voor <span class="nice">Instellingen</span> en vervolgens op <span class="nice">Verzendmethoden</span>.
-                    Klik dan op <span class="nice">PostNL instellen</span> en schakel bij <b>Login informatie</b> de integratie in. <u>De gegevens eronder hoeven niet   ingevuld te worden!</u>
+                    Klik dan op <span class="nice">PostNL instellen</span> en schakel bij <b>Login informatie</b> de integratie in. <u>De gegevens eronder hoeven niet ingevuld te worden!</u>
                 </p>
                     <img alt="" src="media/Lightspeed_PG1.png">
                 <p>
@@ -139,14 +153,27 @@
                     Scroll verder naar beneden en vul bij <span class="nice">Afzenderadres</span> jouw gegevens in.
                     <u>Sla deze instellingen tussentijds op voor je verder gaat met het laatste gedeelte van de instellingen.</u></br></br>
                     
-                    Tot slot moet er een tarief aan <b>Ophalen bij PostNL</b> toegevoegd worden. Wanneer dit nog niet is gedaan, zal de bezorgoptie <u>niet</u> zichtbaar zijn in de checkout. Voeg een tarief toe door onderaan de pagina op <span class="nice">Voeg prijzen toe</span> te klikken. Kies vervolgens voor de verzendoptie 'PostNL - PakjeGemak' en activeer de verzendmethode door <b>Verzendmethode toestaan</b> aan te vinken. Vul tot slot de <b>verzendkosten</b> en <b>Landen</b> aan en sla de pagina op. Vanaf nu kunnen jouw klanten ook in de checkout een PostNL-locatie selecteren! 
+                    Tot slot moet er een tarief aan <b>Ophalen bij PostNL</b> toegevoegd worden. Wanneer dit nog niet is gedaan, zal de bezorgoptie <u>niet</u> zichtbaar zijn in de checkout.
+                    Voeg een tarief toe door onderaan de pagina op <span class="nice">Voeg prijzen toe</span> te klikken.
+                    Kies vervolgens voor de verzendoptie 'PostNL - PakjeGemak' en activeer de verzendmethode door <b>Verzendmethode toestaan</b> aan te vinken.
+                    Vul tot slot de <b>verzendkosten</b> en <b>Landen</b> aan en sla de pagina op. Vanaf nu kunnen jouw klanten ook in de checkout een PostNL-locatie selecteren! 
                 </p>
                 <img alt="" src="media/ophalen_bij_postnl_checkout.png">
                 <h2 id="2_D">2.4 Veelgestelde vragen over de configuratie van de plugin</h2>
+                 <p>
+                    <h3>Hoe wijzig ik de bezorgopties in mijn checkout?</h3>
+                    <i>Om bezorgopties aan of uit te zetten of de prijs aan te passen, klik je vanuit het 'Home'-scherm in de backoffice van je Lightspeed-webshop op <span class="nice">Apps</span>.
+                    Klik aan de linkerkant op <span class="nice">App Store</span> en zoek in de zoekbalk rechtsboven naar 'myparcel'.
+                    Klik op de MyParcel-app om de informatiepagina van de app te openen en klik daarna op <span class="nice">Ga naar App</span>.
+                    De configuratiepagina wordt geopend op een nieuw tabblad.</i>
+                </p>
 				<p>
                 <h3>Wat houdt de korting bij de bezorgopties in?</h3>
-                    <i>Binnen Lightspeed is het mogelijk om bij de standaard verzendmethoden gratis verzending aan te bieden. Om jou hier meer vrijheid in te geven, werken we met een korting per bezorgoptie. Zo kan je jouw klant bijvoorbeeld vanaf €50,- de verzendkosten kosteloos aanbieden, maar betaalt hij/zij toch voor de extra dienst die hij/zij wilt afnemen. In het onderstaande voorbeeld is avondlevering geactiveerd. De klant betaalt voor deze verzendmethode standaard €7,30 maar wanneer het bestelbedrag boven de €50,- komt, zal dit €1,25 zijn. </i>
-                </p> 
+                    <i>Binnen Lightspeed is het mogelijk om bij de standaard verzendmethoden gratis verzending aan te bieden. Om jou hier meer vrijheid in te geven, werken we met een korting per bezorgoptie.
+                    Zo kan je jouw klant bijvoorbeeld vanaf €50,- de verzendkosten kosteloos aanbieden, maar betaalt hij/zij toch voor de extra dienst die hij/zij wilt afnemen.
+                    In het onderstaande voorbeeld is avondlevering geactiveerd. De klant betaalt voor deze verzendmethode standaard €7,30 maar wanneer het bestelbedrag boven de €50,- komt, zal dit €1,25 zijn. </i>
+                </p>
+               
                 <img alt="" src="media/plugin_instellingen_bezorgopties.png">
                 <h1 id="3">3. Gebruik plugin</h1>
                 <h2 id="3_A">3.1 Aanmaken van één verzendlabel</h2>
@@ -155,7 +182,8 @@
                 </p>
                 <h2 id="3_B">3.2 Aanmaken meerdere verzendlabels</h2>
                 <p>
-                    Om meerdere orders in één keer aan te maken, kan je de optie <span class="nice">Wanneer doorsturen naar MyParcel?</span> het best op <b>Orders met status 'Niet verzonden'</b> zetten. Zo worden alle nieuwe orders direct naar MyParcel geëxporteerd.
+                    Om meerdere orders in één keer aan te maken, kan je de optie <span class="nice">Wanneer doorsturen naar MyParcel?</span> het best op <b>Orders met status 'Niet verzonden'</b> zetten.
+                    Zo worden alle nieuwe orders direct naar MyParcel geëxporteerd.
                 </p>
                 <h2 id="3_C">3.3 Aanpassen van een enkele zending</h2>
                 <p>
@@ -164,9 +192,11 @@
                 <h2 id="3_D">3.4 Veelgestelde vragen over het gebruik van de plugin</h2>
 				<p>
                 <h3>Waarom wordt mijn zending niet naar MyParcel geëxporteerd?</h3>
-                    <i>Op het moment dat een zending niet in de MyParcel backoffice terechtkomt, is het belangrijk om te controleren of de zending in de Lightspeed-order de juiste verzendstatus (verzonden / niet verzonden) heeft of dat een 'trigger'-woord in de verzendmethode staat. Als dit niet het geval is, zal de order niet naar MyParcel worden geëxporteerd.
-                    	<br><br>
-                    Daarnaast is het mogelijk dat gegevens die door jouw klant zijn ingevuld, niet "voldoen" aan de verwachtingen van ons systeem. Denk bijvoorbeeld aan het missen van een letter in een Nederlandse postcode of meer dan 6 karakters in het toevoegingen-veld. 
+                    <i>Op het moment dat een zending niet in de MyParcel backoffice terechtkomt, is het belangrijk om te controleren of de zending in de Lightspeed-order de juiste verzendstatus (verzonden / niet verzonden) heeft of dat een 'trigger'-woord in de verzendmethode staat.
+                    Als dit niet het geval is, zal de order niet naar MyParcel worden geëxporteerd.<br><br>
+                    	
+                    Daarnaast is het mogelijk dat gegevens die door jouw klant zijn ingevuld, niet "voldoen" aan de verwachtingen van ons systeem.
+                    Denk bijvoorbeeld aan het missen van een letter in een Nederlandse postcode of meer dan 6 karakters in het toevoegingen-veld. 
                     </i>
                 </p> 
                 <footer class="site-footer">
