@@ -42,9 +42,9 @@ $( document ).ready(function() {
             $('.active > .h2item').show(300);
         });
 
-    /*$('.menu li').click(function () {
-        //$('.hideH2').hide();
+    $('.menu li').click(function () {
+        $('.hideH2').hide();
         $(this).parent().find('ul').show();
-    });*/
+    });
 
 });
