@@ -1,0 +1,235 @@
+<script src="js/auto_menu.js"></script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="menu col-xs-4 col-lg-3">
+            <nav class="navbar nav nav-pills nav-stacked">
+                <div class="menu-items">
+                </div>
+            </nav>
+        </div>
+        <section class="page-header col-xs-8 col-xs-offset-4 col-lg-9 col-lg-offset-3">
+            <img height="185" alt="" src="media/logo_myparcel.png">
+            <h1 class="project-name">
+                Manual Lightspeed-plugin
+            </h1>
+            <br />
+        </section>
+        <section class="main-content col-xs-8 col-xs-offset-4 col-lg-7 col-lg-offset-4">
+            <h1>Introduction</h1>
+            <p>
+                Create your shipping labels automatically using the Lightspeed plug-in. Using this link, you can
+                create four types of MyParcel shipments:
+            </p>
+            <ul>
+                <li>Parcel shipments (including ‘Collect from PostNL location’)</li>
+                <li>Mailbox parcel</li>
+                <li>Unfranked label</li>
+            </ul>
+            The prices displayed are just examples. Actual rates may vary. For up-to-date prices, please consult the rates in your MyParcel account.
+            </p>
+            <div style="margin-top:10px">
+                <h1 id="1">1. Installation</h1>
+                <h2 id="1_A">1.1 New installation</h2>
+                <p>
+                    You can find the MyParcel plug-in in the backoffice of your Lightspeed webshop. Click <span class="nice">Apps</span> in the menu on the left-hand side and then search for <b>MyParcel</b> in the top right-hand corner.
+                    When you click the MyParcel Nederland plug-in (recognisable by the small PostNL logo in the upper right corner), you will be directed to the information page for that plug-in. 
+                    Click <span class="nice">Install app</span> in the top right-hand corner to create the link. 
+                </p>
+                <p> 
+                    Before you can proceed to configuration, the MyParcel plug-in needs permission to read and process information. 
+                    To grant permission, you need to log in on the screen below with <u>the login details for your Lightspeed environment</u>. 
+                </p>  
+                <img alt="" src="media/lightspeed_app_installatie.png"> 
+                <h2 id="1_B">1.2 Updating an existing installation</h2>
+                <p>
+                    As a MyParcel app user, you don’t need to worry about updating the app. The app is updated automatically, which means you’re always using the most recent version.
+                </p>
+                <h2 id="1_C">1.3 Frequently asked questions about the installation</h2>
+                <p>
+                <h3>Why does the MyParcel plug-in need to read and process my order?</h3>
+                    <i>In order to create an export to MyParcel, the plug-in needs permission to read the information. Once the barcode is pre-registered, we will link it back to the Lightspeed order. Since this involves a change to the order, these permissions are required.</span> </i>
+                </p>    
+                <h1 id="2">2. Configuration</h1>
+                <h2 id="2_A">2.1 Standard export settings, shipping and delivery options</h2>
+                <p>
+                    In order to configure the MyParcel app, go to the home screen in the backoffice of your Lightspeed webshop and click <span class="nice">Apps</span>. 
+                    Click <span class="nice">App Store</span> on the left-hand side. Then search for MyParcel in the search bar in the top right-hand corner. 
+                    Click the MyParcel app to open the app’s information page and then click <span class="nice">Go to app</span>. 
+                    The configuration page will open in a new tab.<br/><br/>
+
+                    <img alt="" src="media/Lightspeed_App_Openen4.gif" />
+                </p>
+                <p>
+                    <b> API-key </b><br />
+                    To export shipments to your MyParcel account, you need an API key. You can find it on your MyParcel backoffice by clicking the 
+                    <img height="25" alt="" src="media/myparcel_account_icoon.png"> symbol in the top right-hand corner. Then go to <span class="nice">Settings</span> > <span class="nice">Webshops</span> > <span class="nice">General</span>.
+                </p>
+                <p>
+                    <b> When to forward to MyParcel?</b><br />
+                    Exports can be performed automatically by reading details from orders. 
+                    You can export orders depending on both the shipping method (see chapter 2.2) and the shipping status in Lightspeed. 
+                    Select <span class="nice">Orders with ‘Not sent’ status</span> if you want to export orders to MyParcel automatically. 
+                    They will appear in your MyParcel backoffice automatically within a few minutes. 
+                    You do not need to do anything once they appear in the backoffice. 
+                    If you would prefer to export orders to MyParcel manually, you can select <span class="nice">Orders with ‘Sent’ status</span>. 
+                    You need to set the shipment status to <b>Sent</b> before exporting the order to MyParcel.
+                </p>
+        
+                <p>
+                    <b> Shipping options </b><br />
+                    If you want to offer a specific shipping option as standard for all parcel shipments with destinations in the Netherlands (e.g. insured shipment or signature upon receipt), you can select it here. 
+                    Please note that there are additional costs for some shipping options. 
+                    You can calculate the shipping costs in your MyParcel backoffice at the top of the page, under <span class="nice">Finance</span> > <span class="nice">Calculate rates</span>.<br/><br/>
+
+                    You can also choose to check that the recipient is aged 18 or over on delivery by switching on the <u> Age Check </u> option.
+                </p>
+                 
+                </p>
+                <p>
+                    <b> Bezorgopties </b><br />
+                    <p>You can also let your customers select additional delivery options. Here you can set the delivery options that your customers can select. <strong> NB </strong> 
+                    : since the delivery options are shipping methods in themselves, enter the <u> total shipping costs </u> here.<br/><br/>
+
+                    If you would prefer not to show a date for the morning and evening delivery options, select the ‘ <u> Do not show delivery date at checkout </u> ’ option.
+                </p>
+                </p>
+                <img alt="" src="media/Lightspeed_Bezorgopties.png"> 
+                <p>
+                    Here you can indicate the days you offer shipments to PostNL and the minimum order amount to qualify for free delivery.
+                </p>
+                <p>
+                <h2 id="2_B">2.2 Parcel preferences</h2>
+                    In order to display the correct delivery options at the checkout, you need to configure shipping methods. 
+                    To create a shipping method, click <span class="nice">Settings</span> in the left-hand menu, and then go to <span class="nice">Shop settings</span> and <span class="nice">Shipping methods</span>.
+                    You will now see a summary of your shipping methods. To create a new shipping method, click <span class="nice">Add shipping method manually</span>. 
+                    To export a parcel shipment, select ‘Standard shipment’ in the next screen and click ‘Continue’. The title that now appears is very important. 
+                    The title needs to contain a ‘trigger’ word. The link can identify several words and thereby understand that the following need to be created: </br></br>
+                    <span class="nice">PostNL</span>: Parcel</br>
+                    <span class="nice">Brievenbus</span>: Mailbox parcel</br>
+                    <span class="nice">Ongefrankeerd</span>: Unfranked label</br>
+                    <span class="nice">Bol.com</span>: Parcel</br>
+                    <span class="nice">Exact</span>: Parcel</br>
+                    <span class="nice">Mailbox</span>: Mailbox parcel</br>
+                    <span class="nice">Frankering</span>: Unfranked label</br>
+                    <span class="nice">Postage</span>: Unfranked label</br></br>
+
+                    Examples of shipping method titles you can use: <span class='nice'>Verzending via PostNL</span> <span class='nice'>Brievenbuspakje</span> <span class='nice'>Shipment via PostNL</span>. 
+                    <br>
+                    
+                    <img alt="" src="media/Lightspeed_VoorbeeldVerzendmethoden.png">
+                    <br><br>
+                    
+                    After entering the title, you can add a description that will be showed under the shipping method at the checkout. 
+                    Then click <span class="nice">Add shipping rates</span> to add a shipping rate. Enter a rate and the applicable weights for that rate.
+                    <i>MyParcel charges a standard rate for parcels weighing 0-23kg and an XL rate for parcels weighing 23-30kg.</i>
+                    Once you have set the rates, click <span class="nice">Save</span>.
+                    Select the countries for which the shipping method applies under<strong>Countries</strong> and select how the shipping method will be taxed under ‘Tax rate’. 
+                    Once you have finished configuring the settings, click <span class="nice">Save</span> in the top right-hand corner.
+                </p>    
+                <h2 id="2_C">2.3 Collect from a PostNL location</h2>
+                <p>
+                    To display <strong> Collect from a PostNL location </strong> at your checkout, the standard PostNL plug-in is required. 
+                    First of all, click <span class="nice">Settings</span> in the left-hand menu and then <span class="nice">Shipping methods</span>. 
+                    Then click <span class="nice">PostNL settings</span> and switch on integration in the <strong> Login information </strong> section. 
+                    <u>The details below do not need to be entered! </u>
+                </p>
+                    <img alt="" src="media/Lightspeed_PG1.png">
+                <p>
+                    Scroll down and switch on the <strong> Collect from a PostNL location </strong> option under <span class="nice">Shipping methods</span>. 
+                    Scroll down and enter your details under <b>Sender address</b>. 
+                    <u> Save these settings before proceeding to the last section in the settings. </u></br></br>
+                    
+                    Lastly, you need to add a rate for <strong> Collect from a PostNL location </strong> . 
+                    If you do not do this, the delivery option will not be visible at the checkout. 
+                    Click <span class="nice">Add prices</span> at the bottom of the page to add a rate. 
+                    Then select the ‘PostNL - PakjeGemak’ shipping option and <strong> Allow shipping method </strong> to activate the shipping method. 
+                    Enter the <strong> shipping costs </strong> and <strong> Countries </strong> and save the page. 
+                    Your customers can now select a PostNL location at the checkout!
+                </p>
+                <img alt="" src="media/ophalen_bij_postnl_checkout.png">
+                <h2 id="2_D">2.4 Frequently asked questions about configuring the plug-in</h2>
+                 <p>
+                    <h3>How do I change the delivery options at my checkout?</h3>
+                    <i>In order to turn delivery options on and off or to change the rate, go to the home screen in the backoffice of your Lightspeed webshop and click <span class="nice">Apps</span>. 
+                        Click <span class="nice">App Store</span> on the left-hand side. Then search for MyParcel in the search bar in the top right-hand corner. 
+                        Click the MyParcel app to open the app’s information page and then click <span class="nice">Go to app</span>. \
+                        The configuration page will open in a new tab.</i>
+                </p>
+				<p>
+                <h3>When do customers receive a discount for delivery options?</h3>
+                    <i>Within Lightspeed, you can offer free shipping for standard shipping methods. 
+                        To give you more flexibility, we work with a separate discount for each delivery option. 
+                        You can offer your customer free shipping for orders over €50. They still pay for the extra service they want to purchase. 
+                        In the example below, evening delivery is activated. 
+                        The customer pays €7.30 for this shipping method as standard, but the rate is reduced to €1.25 for orders over €50. </i>
+                </p>
+               
+                <img alt="" src="media/plugin_instellingen_bezorgopties.png">
+
+                <h1 id="3">3. Use of the plugin</h1>
+                <h2 id="3_A">3.1 Creating one shipping label</h2>
+                <p>
+                    To select which orders to export to MyParcel, set the option ‘When to forward to MyParcel?’ from chapter 2.1 to <strong> Orders with ‘Sent’ status </strong> . 
+                    This allows you to export orders individually and decide when to export them.
+                </p>
+                <h2 id="3_B">3.2 Creating multiple shipping labels</h2>
+                <p>
+                    To create multiple orders at the same time, set the option ‘When to forward to MyParcel?’ to <strong> Orders with ‘Not sent’ status </strong> . 
+                    All new orders will be exported directly to MyParcel.
+                </p>
+                <h2 id="3_C">3.3 Making changes to one shipment</h2>
+                <p>
+                    The shipping or delivery options in a Lightspeed order that has already been created cannot be changed. 
+                    However, you can change these options in the MyParcel backoffice by clicking the <img alt="" height=25px src="media/zending_bewerken.png"> symbol next to the shipment.
+                </p>
+                <h2 id="3_D">3.4 Frequently asked questions the use of the plug-in</h2>
+				<p>
+                <h3>Why has my shipment not been exported to MyParcel?</h3>
+                    <i>If you can’t find a shipment in the MyParcel back office, it is important to check that the shipment has the correct shipping status 
+                        (sent/not sent, depending on your settings in chapter 2.1) in the Lightspeed order or that there is a 'trigger' word in the shipment method. 
+                        Otherwise, the order will not be exported to MyParcel.<br><br>
+                    	
+                        Alternatively, the details entered by your customer may not be recognisable by our system. 
+                        A letter might be missing from a Dutch postcode or there may be more than six characters in the suffix field, for example.
+                    </i>
+                </p> 
+                <footer class="site-footer">
+                    <p>
+                        <span class="site-footer-owner">MyParcel</span>
+                    </p>
+                    <p>
+                        <span class="site-footer-credits">
+                            <strong>Adres </strong>Antareslaan 31, 2132 JE Hoofddorp<br />
+                            <strong>Telefoon </strong>023 30 30 315&nbsp;
+                            <strong>E-mail</strong> &nbsp;info@myparcel.nl<br />
+                            <strong>Website </strong><a href="https://www.myparcel.nl">www.myparcel.nl</a>&nbsp;
+                            <strong>IBAN </strong>NL48ABNA0447850539&nbsp;
+                            <strong>KvK </strong>Amsterdam 34 09 97 58 <br />
+                            <strong>BTW-nr. </strong>NL8045.33.258.B01
+                        </span>
+                        <br />
+                        &nzbsp;
+                    </p>
+                </footer>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    // Set postman button attributes in one place
+    postman_buttons = document.getElementsByClassName('postman-run-button');
+
+    for (i = 0; i < postman_buttons.length; i++) {
+        postman_buttons[i].setAttribute('data-postman-action', 'collection/import');
+        postman_buttons[i].setAttribute('data-postman-var-1', '065786285c2e5ed75509');
+        postman_buttons[i].setAttribute('data-postman-param', 'env%5BMyParcel%20public%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiIn0seyJrZXkiOiJVc2VyLUFnZW50IiwidmFsdWUiOiJ7e1VzZXItQWdlbnR9fSIsImRlc2NyaXB0aW9uIjoiIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJhdXRoX3Rva2VuIiwidmFsdWUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsImVuYWJsZWQiOnRydWV9XQ==');
+    }
+
+    (function (p,o,s,t,m,a,n) {
+        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+            (n = o.createElement("script")),
+                (n.id = s+t), (n.async = 1), (n.src = m), n
+        ));
+    }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>

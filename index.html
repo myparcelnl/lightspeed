@@ -1,241 +1,30 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <meta charset="UTF-8" />
-    <title>Handleiding</title>
-    <meta name="description" content="The documentation to make a connection with MyParcel">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="shortcut icon" href="https://backoffice.myparcel.nl/images/favicon/favicon.ico">
-    <link href="css/normalize.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
-    <link href="css/stylesheet.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="css/github-light.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/auto_menu.js"></script>
-</head>
-<body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="menu col-xs-4 col-lg-3">
-            <nav class="navbar nav nav-pills nav-stacked">
-                <div class="menu-items">
-                </div>
-            </nav>
-        </div>
-        <section class="page-header col-xs-8 col-xs-offset-4 col-lg-9 col-lg-offset-3">
-            <img height="185" alt="" src="media/logo_myparcel.png">
-            <h1 class="project-name">
-                Handleiding Lightspeed-plugin
-            </h1>
-            <br />
-        </section>
-        <section class="main-content col-xs-8 col-xs-offset-4 col-lg-7 col-lg-offset-4">
-            <h1>Inleiding</h1>
-            <p>
-                Maak jouw verzendlabels automatisch aan met het gebruik van de Lightspeed-plugin. Met deze koppeling kun je vier soorten MyParcel zendingen aanmaken:
-            </p>
-            <ul>
-                <li>Pakket zendingen (inclusief 'Ophalen bij PostNL-locatie')</li>
-                <li>Brievenbuspakje</li>
-                <li>Ongefrankeerd label</li>
-            </ul>
-            De getoonde prijzen zijn slechts als voorbeeld ingesteld en wijken mogelijk af van werkelijke tarieven. Voor de juiste prijzen kun je de tarieven in jouw MyParcel-account raadplegen.
-            </p>
-            <div style="margin-top:10px">
-                <h1 id="1">1. Installatie</h1>
-                <h2 id="1_A">1.1 Nieuwe installatie</h2>
-                <p>
-                    De MyParcel-plugin is te vinden in de backoffice van jouw Lightspeed-webshop. Klik in het menu
-                    aan de linkerkant op <span class="nice">Apps</span> en zoek vervolgens rechts bovenin op <b>MyParcel</b>.
-                    Wanneer je de plugin van MyParcel Nederland aanklikt, deze is te herkennen aan het PostNL-logo, kom je op de informatiepagina van de plugin. 
-                    Klik rechts bovenin op <span class="nice">Installeer app</span> om de koppeling te maken. 
-                </p>
-                <p> 
-                    Voordat je naar de configuratie kunt gaan, moet de plugin van MyParcel toestemming krijgen om informatie uit te lezen en te bewerken.
-                    Om toestemming te geven, moet er worden in het onderstaande scherm ingelogd met <u>de inloggegevens van jouw Lightspeed-omgeving</u>. 
-                </p>  
-                <img alt="" src="media/lightspeed_app_installatie.png"> 
-                <h2 id="1_B">1.2 Updaten bestaande installatie</h2>
-                <p>
-                    Je hoeft je als gebruiker van de MyParcel-app geen zorgen te maken over het updaten van de app. Deze wordt automatisch geüpdatet, waardoor je altijd de meest recente versie gebruikt.
-                </p>
-                <h2 id="1_C">1.3 Veelgestelde vragen over de installatie</h2>
-                <p>
-                <h3>Waarom moet de MyParcel-plugin mijn order kunnen uitlezen en bewerken?</h3>
-                    <i>Om een export naar MyParcel te kunnen maken, moet de plugin het recht hebben om de gegevens uit te kunnen lezen. Na het voormelden van de barcode, koppelen we deze terug naar de desbetreffende Lightspeed-order. Omdat je hiermee de order "wijzigt", zijn deze rechten ook benodigd.  </span> </i>
-                </p>    
-                <h1 id="2">2. Configuratie</h1>
-                <h2 id="2_A">2.1 Standaard exportinstellingen, verzend- en bezorgopties</h2>
-                <p>
-                    Om de MyParcel-app te configureren, klik je vanuit het 'Home'-scherm in de backoffice van je Lightspeed-webshop op <span class="nice">Apps</span>. Klik aan de linkerkant op <span class="nice">App Store</span>
-                    en zoek in de zoekbalk rechtsboven naar 'myparcel'. Klik op de MyParcel-app om de informatiepagina van de app te openen en klik daarna op <span class="nice">Ga naar App</span>.
-                    De configuratiepagina wordt geopend op een nieuw tabblad. <br><br>
-                    
-                    <img alt="" src="media/Lightspeed_App_Openen4.gif" />
-                    
-                </p>
-                <p>
-                    <b> API-key </b><br />
-                    Om zendingen naar jouw MyParcel-account te kunnen exporteren, is een API-key noodzakelijk. Deze kan je in jouw MyParcel-backoffice vinden door 
-                    rechts bovenin op het <img height="25" alt="" src="media/myparcel_account_icoon.png">-teken te klikken en vervolgens naar <span class="nice">Instellingen > Webshops > Algemeen</span> te gaan.
-                </p>
-                <p>
-                    <b> Wanneer doorsturen naar MyParcel? </b><br />
-                    De exports kunnen automatisch worden uitgevoerd door gegevens uit de orders uit te lezen. Naast de titel van de verzendmethode (zie hoofdstuk 2.2),
-                    is de export ook afhankelijk van de verzendstatus in Lightspeed. Kies voor <span class="nice">Orders met status 'Niet verzonden'</span> als je de
-                    orders automatisch naar MyParcel wilt laten exporteren. Ze verschijnen dan na enkele minuten automatisch in de MyParcel-backoffice.
-                    Je hoeft hier dan zelf niks voor te doen. Wanneer je liever zelf bepaalt wanneer jouw orders naar MyParcel worden geëxporteerd, kun je voor
-                    <span class="nice">Orders met status 'Verzonden'</span> kiezen. Hiervoor zal je de verzending van de desbetreffende order eerst op <b>Verzonden</b> moeten zetten,
-                    voordat deze wordt geëxporteerd naar MyParcel.
-                </p>
-                <p>
-                    <b> Verzendopties </b><br />
-                    Als je alle Nederlandse pakketzendingen standaard van een verzendoptie wilt voorzien <i>(bijvoorbeeld: verzerkerd verzenden, handtekening voor ontvangst, etc.)</i>, kan je deze hier selecteren. Let op dat er aan sommige verzendopties extra kosten zijn verbonden. Je kunt deze tarieven in de MyParcel-backoffice
-                    bovenaan de pagina bij <span class="nice">Financieel</span> > <span class="nice">Tarieven</span> berekenen.<br><br>
-                    
-                    Je kunt er ook voor kiezen om bij aflevering te laten controleren of de ontvanger 18+ is door <u>Leeftijdscontrole</u> aan te zetten. 
-                
-                </p>
-                <p>
-                    <b> Bezorgopties </b><br />
-                    Het is ook mogelijk om je klanten te laten kiezen voor extra bezorgopties.
-                    Uit welke bezorgopties je klanten kunnen kiezen, stel je hier in. <b>Let op:</b> omdat de bezorgopties op zichzelf staande verzendmethoden zijn, vul je hier het <u>totaalbedrag van de verzendkosten</u> in.<br><br>
-                    
-                    Wanneer je liever geen datum toont bij de bezorgopties Ochtend- en avondlevering, vink dan de optie <u>Geen afleverdatum tonen in checkout</u> aan.
-                </p>
-                <img alt="" src="media/Lightspeed_Bezorgopties.png"> 
-                <p>
-                    Hier geef je ook aan op welke dagen jij zendingen aflevert bij PostNL en vanaf welk bedrag jij je de zending met de bezorgoptie gratis verstuurt.
-                </p>
-                <p>
-                <h2 id="2_B">2.2 Pakketvoorkeuren</h2>
-                    Wanneer je de juiste bezorgopties wilt laten zien in je checkout, zal je verzendmethoden moeten instellen.
-                    Om een verzendmethode aan te maken, klik je aan de linkerkant in het menu op <span class="nice">Instellingen</span> en vervolgens onder <span class="nice">Shopinstellingen</span> op <span class="nice">Verzendmethoden</span>.
-                    Hier zie je het overzicht van je verzendmethoden. Om een nieuwe verzendmethode aan te maken klik je op de blauwe knop <span class="nice">Handmatige verzendmethode toevoegen</span>.
-                    Om een pakketzending te kunnen exporteren selecteer je in het volgende scherm 'Standaardverzending' en klik je op 'Doorgaan'.
-                    Wat er vervolgens bij de titel wordt ingevuld, is heel belangrijk. De titel moet namelijk een 'trigger'-woord bevatten. 
-                    De koppeling kent enkele woorden die het kan uitlezen voor welke soort zending er moet worden aangemaakt: </br></br>
-                    <span class="nice">PostNL</span>: Pakket</br>
-                    <span class="nice">Brievenbus</span>: Brievenbuspakje</br>
-                    <span class="nice">Ongefrankeerd</span>: Ongefrankeerd label</br>
-                    <span class="nice">Bol.com</span>: Pakket</br>
-                    <span class="nice">Exact</span>: Pakket</br>
-                    <span class="nice">Mailbox</span>: Brievenbuspakje</br>
-                    <span class="nice">Frankering</span>: Ongefrankeerd label</br>
-                    <span class="nice">Postage</span>: Ongefrankeerd label</br></br>
-                    Voorbeelden die je kunt gebruiken: <span class='nice'>Verzending via PostNL</span> <span class='nice'>Brievenbuspakje</span> <span class='nice'>Shipment via PostNL</span>. 
-                    <br>
-                    
-                    <img alt="" src="media/Lightspeed_VoorbeeldVerzendmethoden.png">
-                    <br><br>
-                    
-                    Na het invullen van een titel, kun je een omschrijving toevoegen, welke zal worden weergeven onder de verzendmethode in de checkout.
-                    Voeg vervolgens een verzendtarief toe door op de knop <span class="nice">Voeg verzendtarieven toe</span> te klikken. Hier vul je een tarief in en voor welke gewichten dit tarief geldt.
-                    <i>MyParcel rekent voor een gewicht van 0 kg – 23,0 kg een standaardtarief en van 23,0 kg – 30,0 kg een XL-tarief.</i>
-                    Als je de tarieven hebt ingesteld kun je op <span class="nice">Opslaan</span> klikken.
-                    Bij <b>Landen</b> is het de bedoeling dat je de landen, waar de verzendmethode voor geldt, aanvinkt en bij 'Belastingtarief' kies je hoe de verzendmethode wordt belast.
-                    Wanneer je de instellingen hebt voltooid, klik je rechtsboven op <span class="nice">Opslaan</span>.
-                </p>    
-                <h2 id="2_C">2.3 Ophalen bij een PostNL-locatie</h2>
-                <p>
-                    Om <b>Ophalen bij een PostNL-locatie</b> te tonen in je checkout, is de standaard plugin van PostNL benodigd.
-                    Allereerst klik je aan de linkerkant in het menu voor <span class="nice">Instellingen</span> en vervolgens op <span class="nice">Verzendmethoden</span>.
-                    Klik dan op <span class="nice">PostNL instellen</span> en schakel bij <b>Login informatie</b> de integratie in. <u>De gegevens eronder hoeven niet ingevuld te worden!</u>
-                </p>
-                    <img alt="" src="media/Lightspeed_PG1.png">
-                <p>
-                    Scroll naar beneden en schakel bij <span class="nice">Verzendmethoden</span> de optie <b>Ophalen bij een PostNL-locatie</b> in.
-                    Scroll verder naar beneden en vul bij <span class="nice">Afzenderadres</span> jouw gegevens in.
-                    <u>Sla deze instellingen tussentijds op voor je verder gaat met het laatste gedeelte van de instellingen.</u></br></br>
-                    
-                    Tot slot moet er een tarief aan <b>Ophalen bij PostNL</b> toegevoegd worden. Wanneer dit nog niet is gedaan, zal de bezorgoptie <u>niet</u> zichtbaar zijn in de checkout.
-                    Voeg een tarief toe door onderaan de pagina op <span class="nice">Voeg prijzen toe</span> te klikken.
-                    Kies vervolgens voor de verzendoptie 'PostNL - PakjeGemak' en activeer de verzendmethode door <b>Verzendmethode toestaan</b> aan te vinken.
-                    Vul tot slot de <b>verzendkosten</b> en <b>Landen</b> aan en sla de pagina op. Vanaf nu kunnen jouw klanten ook in de checkout een PostNL-locatie selecteren! 
-                </p>
-                <img alt="" src="media/ophalen_bij_postnl_checkout.png">
-                <h2 id="2_D">2.4 Veelgestelde vragen over de configuratie van de plugin</h2>
-                 <p>
-                    <h3>Hoe wijzig ik de bezorgopties in mijn checkout?</h3>
-                    <i>Om bezorgopties aan of uit te zetten of de prijs aan te passen, klik je vanuit het 'Home'-scherm in de backoffice van je Lightspeed-webshop op <span class="nice">Apps</span>.
-                    Klik aan de linkerkant op <span class="nice">App Store</span> en zoek in de zoekbalk rechtsboven naar 'myparcel'.
-                    Klik op de MyParcel-app om de informatiepagina van de app te openen en klik daarna op <span class="nice">Ga naar App</span>.
-                    De configuratiepagina wordt geopend op een nieuw tabblad.</i>
-                </p>
-		<p>
-                <h3>Wat houdt de korting bij de bezorgopties in?</h3>
-                    <i>Binnen Lightspeed is het mogelijk om bij de standaard verzendmethoden gratis verzending aan te bieden. Om jou hier meer vrijheid in te geven, werken we met een korting per bezorgoptie.
-                    Zo kan je jouw klant bijvoorbeeld vanaf €50,- de verzendkosten kosteloos aanbieden, maar betaalt hij/zij toch voor de extra dienst die hij/zij wilt afnemen.
-                    In het onderstaande voorbeeld is avondlevering geactiveerd. De klant betaalt voor deze verzendmethode standaard €7,30 maar wanneer het bestelbedrag boven de €50,- komt, zal dit €1,25 zijn. </i>
-                </p>
-               
-                <img alt="" src="media/plugin_instellingen_bezorgopties.png">
-                <h1 id="3">3. Gebruik plugin</h1>
-                <h2 id="3_A">3.1 Aanmaken van één verzendlabel</h2>
-                <p>
-                    Om niet alle orders in één keer naar MyParcel te exporteren, kan je de optie <span class="nice">Wanneer doorsturen naar MyParcel?</span> uit hoofdstuk 2.1 op <b>Orders met status 'Verzonden'</b> te zetten. Op deze manier houd je het moment van exporteren in eigen hand en kan je orders per stuk exporteren.
-                </p>
-                <h2 id="3_B">3.2 Aanmaken meerdere verzendlabels</h2>
-                <p>
-                    Om meerdere orders in één keer aan te maken, kan je de optie <span class="nice">Wanneer doorsturen naar MyParcel?</span> het best op <b>Orders met status 'Niet verzonden'</b> zetten.
-                    Zo worden alle nieuwe orders direct naar MyParcel geëxporteerd.
-                </p>
-                <h2 id="3_C">3.3 Aanpassen van een enkele zending</h2>
-                <p>
-                    Het is niet mogelijk om binnen een gemaakte Lightspeed-order de verzend- of bezorgopties te wijzigen. Dit kan wél in de MyParcel-backoffice door op het <img alt="" height=25px src="media/zending_bewerken.png">-icoontje achter de zending te klikken.
-                </p>
-                <h2 id="3_D">3.4 Veelgestelde vragen over het gebruik van de plugin</h2>
-				<p>
-                <h3>Waarom wordt mijn zending niet naar MyParcel geëxporteerd?</h3>
-                    <i>Op het moment dat een zending niet in de MyParcel backoffice terechtkomt, is het belangrijk om te controleren of de zending in de Lightspeed-order de juiste verzendstatus (verzonden / niet verzonden) heeft of dat een 'trigger'-woord in de verzendmethode staat.
-                    Als dit niet het geval is, zal de order niet naar MyParcel worden geëxporteerd.<br><br>
-                    	
-                    Daarnaast is het mogelijk dat gegevens die door jouw klant zijn ingevuld, niet "voldoen" aan de verwachtingen van ons systeem.
-                    Denk bijvoorbeeld aan het missen van een letter in een Nederlandse postcode of meer dan 6 karakters in het toevoegingen-veld. 
-                    </i>
-                </p> 
-                <footer class="site-footer">
-                    <p>
-                        <span class="site-footer-owner">MyParcel</span>
-                    </p>
-                    <p>
-                        <span class="site-footer-credits">
-                            <strong>Adres </strong>Antareslaan 31, 2132 JE Hoofddorp<br />
-                            <strong>Telefoon </strong>023 30 30 315&nbsp;
-                            <strong>E-mail</strong> &nbsp;info@myparcel.nl<br />
-                            <strong>Website </strong><a href="https://www.myparcel.nl">www.myparcel.nl</a>&nbsp;
-                            <strong>IBAN </strong>NL48ABNA0447850539&nbsp;
-                            <strong>KvK </strong>Amsterdam 34 09 97 58 <br />
-                            <strong>BTW-nr. </strong>NL8045.33.258.B01
-                        </span>
-                        <br />
-                        &nbsp;
-                    </p>
-                </footer>
-            </div>
-        </section>
-    </div>
-</div>
-<script>
-    // Set postman button attributes in one place
-    postman_buttons = document.getElementsByClassName('postman-run-button');
 
-    for (i = 0; i < postman_buttons.length; i++) {
-        postman_buttons[i].setAttribute('data-postman-action', 'collection/import');
-        postman_buttons[i].setAttribute('data-postman-var-1', '065786285c2e5ed75509');
-        postman_buttons[i].setAttribute('data-postman-param', 'env%5BMyParcel%20public%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiIn0seyJrZXkiOiJVc2VyLUFnZW50IiwidmFsdWUiOiJ7e1VzZXItQWdlbnR9fSIsImRlc2NyaXB0aW9uIjoiIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJhdXRoX3Rva2VuIiwidmFsdWUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsImVuYWJsZWQiOnRydWV9XQ==');
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lightspeed Manual</title>
+        <meta name="description" content="The documentation to make a connection with MyParcel">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="shortcut icon" href="https://backoffice.myparcel.nl/images/favicon/favicon.ico">
+        <link href="css/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="css/languagepicker.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
+        <link href="css/stylesheet.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="css/github-light.css" media="screen" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/auto_menu.js"></script>
+        <script src="js/languagepicker.js"></script>
+    </head>
 
-    (function (p,o,s,t,m,a,n) {
-        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
-        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
-            (n = o.createElement("script")),
-                (n.id = s+t), (n.async = 1), (n.src = m), n
-        ));
-    }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
-</script>
+    <body>
+        <ul class="languagepicker roundborders">
+            <li id="NL"><img src="media/flags/netherlands-flag-icon-16.png"/> (NL)</li>
+            <li id="EN"><img src="media/flags/british-flag-icon-16.png"/> (EN)</li>
+        </ul>
+        <section class="all-content"></section>
+    </body>
 
-</body>
 </html>
