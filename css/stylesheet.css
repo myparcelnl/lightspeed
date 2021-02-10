@@ -11,6 +11,7 @@ body {
     position: relative;
 }
 
+
 a {
     color: #0F5C47;
     text-decoration: none;
@@ -26,7 +27,6 @@ a:hover, a:focus {
 h1 {
     border-bottom: 1px solid #0F5C47;
 }
-
 
 .nice {
     border-radius: 5px;
@@ -236,6 +236,7 @@ h1 {
 }
 
 .main-content p {
+    text-align: justify;
     margin-bottom: 1em;
 }
 
